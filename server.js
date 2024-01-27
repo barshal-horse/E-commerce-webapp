@@ -25,7 +25,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
-app.use(expree.static(path.join(__dirname, "./client/biuld")));
+app.use(express.static(path.join(__dirname, "./client/biuld")));
 
 //routes
 app.use("/api/v1/auth", authRoutes);
